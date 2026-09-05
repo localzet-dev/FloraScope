@@ -1,0 +1,28 @@
+{
+  "protocol": "frozen_model_new_test_visible_observations_v1",
+  "model": "/artifacts/competition_model_updated_schema",
+  "folds": [
+    {
+      "seed": 9901,
+      "targets": 1970,
+      "rmse": 0.06708406832645107,
+      "linear_rmse_common": 0.09513063888921866,
+      "linear_targets": 1970
+    },
+    {
+      "seed": 10039,
+      "targets": 1970,
+      "rmse": 0.07014395033445543,
+      "linear_rmse_common": 0.09767224183273288,
+      "linear_targets": 1970
+    },
+    {
+      "seed": 10177,
+      "targets": 1970,
+      "rmse": 0.08246417984060406,
+      "linear_rmse_common": 0.10515391464891728,
+      "linear_targets": 1970
+    }
+  ],
+  "rmse_mean": 0.07323073283383685
+}

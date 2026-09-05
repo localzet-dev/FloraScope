@@ -1,0 +1,50 @@
+{
+  "rows": 99955,
+  "polygons": 39,
+  "years": [
+    2010,
+    2024
+  ],
+  "primary_known": 30520,
+  "synthetic_gaps": 0,
+  "crops": [
+    "зерновые",
+    "озимая пшеница",
+    "пастбища/зерновые",
+    "подсолнечник"
+  ],
+  "source_priority": {
+    "checked": 30520,
+    "matches": 30520,
+    "match_rate": 1.0,
+    "source_counts": {
+      "landsat": 13284,
+      "s2": 11235,
+      "modis": 6001
+    }
+  },
+  "columns": [
+    "anon_polygon_id",
+    "date",
+    "s2_ndvi",
+    "s2_evi",
+    "s2_ndwi",
+    "landsat_ndvi",
+    "landsat_evi",
+    "landsat_ndwi",
+    "modis_ndvi",
+    "modis_evi",
+    "era5_temp_c",
+    "era5_precip_mm",
+    "year",
+    "primary_ndvi",
+    "doy",
+    "ndvi_climatology_mean",
+    "ndvi_climatology_std",
+    "ndvi_zscore",
+    "n_reference_years",
+    "status",
+    "crop_type",
+    "is_synthetic_gap"
+  ]
+}

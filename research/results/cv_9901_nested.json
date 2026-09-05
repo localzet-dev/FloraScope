@@ -1,0 +1,35 @@
+{
+  "rmse": 0.06217523275333839,
+  "general_rmse": 0.06472451852820371,
+  "source_aware_rmse": 0.06290834755963909,
+  "organizer_score_estimate": 11.35,
+  "validation_targets": 4571,
+  "baselines": {
+    "primary_ndvi__interp": 0.0929149487467142,
+    "whittaker": 0.08155396230194265,
+    "sensor_ndvi_median": 0.08142949101464893,
+    "clim_corrected": 0.14850235937557704,
+    "aoi_climatology": 0.1912964778013535
+  },
+  "general_weight": 0.2,
+  "selected_baseline": null,
+  "model_weight": 1.0,
+  "source_classifier_accuracy": 0.9299934368847079,
+  "source_breakdown": {
+    "s2": {
+      "rows": 1693,
+      "rmse": 0.0675431381684936
+    },
+    "landsat": {
+      "rows": 2008,
+      "rmse": 0.0574678213581736
+    },
+    "modis": {
+      "rows": 870,
+      "rmse": 0.06173052071340343
+    }
+  },
+  "protocol": "nested_calibration_v1",
+  "seed": 9901,
+  "calibration_targets": 3903
+}

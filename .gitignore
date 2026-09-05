@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.coverage
+.coverage.*
+htmlcov/
+
+# Frontend
+node_modules/
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+
+# Локальные настройки и секреты; пример конфигурации входит в репозиторий.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.idea/
+.vscode/
+.codex/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Только входы и результаты, необходимые для сдачи и воспроизведения.
+# Старый test_dataset оставляем для исследований исходного протокола.
+/data/*
+!/data/input/
+!/data/output/
+/data/input/*
+!/data/input/train_dataset.csv
+!/data/input/private_features.csv
+!/data/input/test_dataset.csv
+/data/output/*
+!/data/output/submission.csv
+!/data/output/report.json
+!/data/output/analysis_points.csv
+!/data/output/events.csv
+
+# В поставке одна рабочая модель; кандидаты и резервные копии остаются локально.
+/artifacts/*
+!/artifacts/competition_model/
+/artifacts/competition_model/*
+!/artifacts/competition_model/*.joblib
+!/artifacts/competition_model/metadata.json

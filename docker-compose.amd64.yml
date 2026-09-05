@@ -1,0 +1,7 @@
+# Fallback для Apple Silicon / ARM-хоста, если какая-то сторонняя библиотека
+# внезапно не даст native linux/arm64 wheel. Обычно этот файл НЕ нужен!
+services:
+  api:
+    platform: linux/amd64
+  web:
+    platform: linux/amd64

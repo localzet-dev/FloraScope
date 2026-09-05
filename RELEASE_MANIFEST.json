@@ -1,0 +1,65 @@
+{
+  "version": "3.0.1",
+  "profile": "iteration-1-audited",
+  "architecture": [
+    "analytics",
+    "backend",
+    "frontend"
+  ],
+  "tests": {
+    "analytics": 26,
+    "backend": 5,
+    "typescript_strict": true,
+    "compose_build_linux_amd64": true,
+    "compose_config_base_and_amd64_fallback": true,
+    "frontend": 6
+  },
+  "competition": {
+    "validation_seed": 9901,
+    "validation_rmse": 0.06217523275333839,
+    "estimated_gap_score": 11.35,
+    "source_classifier_accuracy": 0.9299934368847079,
+    "submission_rows": 2323,
+    "submission_valid": true,
+    "validation_protocol": "nested_calibration_v1",
+    "unseen_aoi_rmse": 0.05782079928477263,
+    "unseen_aoi_targets": 813,
+    "test_sha256": "f7ba087818175ea644fc9fe652c6a3874b5bfcde7df197d3e7541cb95876f855",
+    "validation_note": "CV measured on original train with organizer climatology columns; updated test omits these two columns. Updated-test RMSE is unknown."
+  },
+  "bundled": {
+    "organizer_train": true,
+    "organizer_test": true,
+    "trained_model": true,
+    "submission": true,
+    "analysis_points": true,
+    "events": true,
+    "task_pdf": true,
+    "criteria_pdf": true,
+    "research_results": true
+  },
+  "verification_note": "Linux amd64 Docker build/start, container tests, benchmark, production inference, validator and browser benchmark view verified. Windows/macOS/native arm64 runtime not executed. Full live verification status is recorded in docs/audit_iteration_1.md.",
+  "portability": {
+    "windows": {
+      "designed": true,
+      "launcher": "scripts/start.ps1",
+      "runtime_verified_in_packaging_env": false
+    },
+    "linux": {
+      "designed": true,
+      "launcher": "scripts/start.sh",
+      "python_tests_verified": true,
+      "docker_runtime_verified_in_packaging_env": true
+    },
+    "macos": {
+      "designed": true,
+      "launcher": "scripts/start.sh",
+      "native_arm64_first": true,
+      "amd64_fallback": "docker-compose.amd64.yml",
+      "runtime_verified_in_packaging_env": false
+    },
+    "sqlite_named_volume": true,
+    "host_paths_relative_only": true,
+    "line_endings_pinned": true
+  }
+}
