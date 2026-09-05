@@ -1,0 +1,47 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "${FLORASCOPE_API_PORT:-8000}:8000"
+    environment:
+      FLORASCOPE_DATA_DIR: /data
+      FLORASCOPE_ARTIFACTS_DIR: /artifacts
+      # SQLite держим в docker volume, а не на bind-mount Windows/macOS.
+      # Так меньше сюрпризов с locking/WAL на Desktop file sharing.
+      FLORASCOPE_DB_PATH: /state/florascope.db
+      FLORASCOPE_EARTH_SEARCH_URL: ${FLORASCOPE_EARTH_SEARCH_URL:-https://earth-search.aws.element84.com/v1}
+      FLORASCOPE_OPEN_METEO_URL: ${FLORASCOPE_OPEN_METEO_URL:-https://archive-api.open-meteo.com/v1/archive}
+      FLORASCOPE_OVERPASS_URL: ${FLORASCOPE_OVERPASS_URL:-https://overpass-api.de/api/interpreter}
+      FLORASCOPE_ANALYSIS_RESOLUTION_M: ${FLORASCOPE_ANALYSIS_RESOLUTION_M:-20}
+      FLORASCOPE_MAX_ANALYSIS_CELLS: ${FLORASCOPE_MAX_ANALYSIS_CELLS:-300000}
+      FLORASCOPE_SCENE_WORKERS: ${FLORASCOPE_SCENE_WORKERS:-3}
+      FLORASCOPE_ALLOWED_ORIGINS: http://localhost:5173,http://localhost:${FLORASCOPE_WEB_PORT:-8080}
+      HTTP_PROXY: ${FLORASCOPE_HTTP_PROXY:-}
+      HTTPS_PROXY: ${FLORASCOPE_HTTPS_PROXY:-}
+      NO_PROXY: localhost,127.0.0.1,api,web
+      # COG содержит геопривязку внутри файла. Поиск соседних sidecar-файлов
+      # в удалённом bucket даёт лишние запросы и долгие таймауты.
+      GDAL_DISABLE_READDIR_ON_OPEN: EMPTY_DIR
+      OMP_NUM_THREADS: ${OMP_NUM_THREADS:-4}
+      MKL_NUM_THREADS: ${MKL_NUM_THREADS:-4}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./data:/data
+      - ./artifacts:/artifacts
+      - florascope_state:/state
+
+  web:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "${FLORASCOPE_WEB_PORT:-8080}:80"
+    # Специально нет depends_on: web должен открыться даже во время рестарта API.
+
+volumes:
+  florascope_state:
