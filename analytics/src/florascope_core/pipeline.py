@@ -238,7 +238,9 @@ def infer(
         {
             ID: frame.loc[targets, ID].to_numpy(),
             DATE: frame.loc[targets, DATE].dt.strftime("%Y-%m-%d").to_numpy(),
-            "primary_ndvi_pred": prediction,
+            # Платформа называет колонку ответа primary_ndvi_true, хотя для нас
+            # это предсказание. Имя сохраняем ровно по контракту загрузчика.
+            "primary_ndvi_true": prediction,
         }
     )
     submission_path = root / "submission.csv"

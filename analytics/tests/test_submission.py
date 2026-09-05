@@ -9,7 +9,7 @@ def test_submission_keys_must_match_synthetic_rows(tmp_path: Path) -> None:
     _, test = generate_competition_fixture(tmp_path / "input")
     frame = pd.read_csv(test)
     expected = frame.loc[frame.is_synthetic_gap, ["anon_polygon_id", "date"]].copy()
-    expected["primary_ndvi_pred"] = 0.5
+    expected["primary_ndvi_true"] = 0.5
     path = tmp_path / "submission.csv"
     expected.to_csv(path, index=False)
     report = validate_submission(test, path)
@@ -23,7 +23,7 @@ def test_submission_rejects_nan_duplicates_extra_rows_and_columns(tmp_path):
     _, test = generate_competition_fixture(tmp_path / 'input')
     frame = pd.read_csv(test)
     good = frame.loc[frame.is_synthetic_gap, ['anon_polygon_id', 'date']].copy()
-    good['primary_ndvi_pred'] = .5
+    good['primary_ndvi_true'] = .5
     nan = good.copy();
     nan.iloc[0, 2] = np.nan
     extra_column = good.assign(extra=1)

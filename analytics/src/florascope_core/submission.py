@@ -11,7 +11,7 @@ from .schema import DATE, ID, SYNTHETIC
 def validate_submission(test_path: str | Path, submission_path: str | Path) -> dict:
     test = load_csv(test_path)
     submission = pd.read_csv(submission_path)
-    required = [ID, DATE, "primary_ndvi_pred"]
+    required = [ID, DATE, "primary_ndvi_true"]
     missing = [column for column in required if column not in submission]
     if missing:
         raise ValueError(f"В submission не хватает колонок: {missing}")
@@ -20,7 +20,7 @@ def validate_submission(test_path: str | Path, submission_path: str | Path) -> d
     if submission.duplicated([ID, DATE]).any():
         raise ValueError("В submission есть дубли polygon/date")
 
-    prediction = pd.to_numeric(submission["primary_ndvi_pred"], errors="coerce")
+    prediction = pd.to_numeric(submission["primary_ndvi_true"], errors="coerce")
     if not np.isfinite(prediction).all():
         raise ValueError("В submission есть NaN/inf")
 

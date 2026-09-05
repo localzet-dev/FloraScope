@@ -109,7 +109,7 @@ def series(polygon_id: str, state: Container = Depends(container)) -> list[dict]
     columns = [
         "date",
         "primary_ndvi",
-        "primary_ndvi_pred",
+        "primary_ndvi_true",
         "primary_ndvi_filled",
         "climatology_calc",
         "ndvi_zscore_calc",

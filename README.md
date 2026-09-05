@@ -127,7 +127,7 @@ docker compose run --rm api florascope-core validate-submission \
 Формат ровно такой:
 
 ```csv
-anon_polygon_id,date,primary_ndvi_pred
+anon_polygon_id,date,primary_ndvi_true
 ```
 
 Natural gaps в submission не добавляем.
