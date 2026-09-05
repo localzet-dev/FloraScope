@@ -1,0 +1,92 @@
+{
+  "validation": {
+    "rmse": 0.06217523275333839,
+    "general_rmse": 0.06472451852820371,
+    "source_aware_rmse": 0.06290834755963909,
+    "organizer_score_estimate": 11.35,
+    "validation_targets": 4571,
+    "baselines": {
+      "primary_ndvi__interp": 0.0929149487467142,
+      "whittaker": 0.08155396230194265,
+      "sensor_ndvi_median": 0.08142949101464893,
+      "clim_corrected": 0.14850235937557704,
+      "aoi_climatology": 0.1912964778013535
+    },
+    "general_weight": 0.2,
+    "selected_baseline": null,
+    "model_weight": 1.0,
+    "source_classifier_accuracy": 0.9299934368847079,
+    "source_breakdown": {
+      "s2": {
+        "rows": 1693,
+        "rmse": 0.0675431381684936
+      },
+      "landsat": {
+        "rows": 2008,
+        "rmse": 0.0574678213581736
+      },
+      "modis": {
+        "rows": 870,
+        "rmse": 0.06173052071340343
+      }
+    },
+    "protocol": "nested_calibration_v1",
+    "seed": 9901,
+    "calibration_targets": 3903
+  },
+  "training": {
+    "dataset": {
+      "rows": 99955,
+      "polygons": 39,
+      "years": [
+        2010,
+        2024
+      ],
+      "primary_known": 30520,
+      "synthetic_gaps": 0,
+      "crops": [
+        "зерновые",
+        "озимая пшеница",
+        "пастбища/зерновые",
+        "подсолнечник"
+      ]
+    },
+    "training_examples": 9142,
+    "features": 103,
+    "general_models": 1,
+    "source_models": {
+      "s2": 1,
+      "landsat": 1,
+      "modis": 1
+    },
+    "seconds": 85.87
+  },
+  "inference": {
+    "dataset": {
+      "rows": 57185,
+      "polygons": 78,
+      "years": [
+        2010,
+        2025
+      ],
+      "primary_known": 17641,
+      "synthetic_gaps": 3112,
+      "crops": [
+        "зерновые",
+        "озимая пшеница",
+        "пастбища/зерновые",
+        "подсолнечник"
+      ]
+    },
+    "submission_rows": 3112,
+    "submission": "/data/output/submission.csv",
+    "analysis_points": "/data/output/analysis_points.csv",
+    "events": "/data/output/events.csv"
+  },
+  "submission_validation": {
+    "valid": true,
+    "rows": 3112,
+    "min_prediction": 0.0994840459103199,
+    "max_prediction": 0.8879822208095766
+  }
+}

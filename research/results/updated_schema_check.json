@@ -1,0 +1,131 @@
+{
+  "removed_columns": [
+    "ndvi_climatology_mean",
+    "ndvi_climatology_std"
+  ],
+  "folds": [
+    {
+      "seed": 9901,
+      "targets": 4571,
+      "original_reproduced_rmse": 0.06217523275333839,
+      "old_model_missing_columns_rmse": 0.06231795797169305,
+      "retrained_without_columns": {
+        "rmse": 0.062067396754719534,
+        "general_rmse": 0.06455714377239309,
+        "source_aware_rmse": 0.06272290100922255,
+        "organizer_score_estimate": 11.38,
+        "validation_targets": 4571,
+        "baselines": {
+          "primary_ndvi__interp": 0.0929149487467142,
+          "whittaker": 0.08155396230194265,
+          "sensor_ndvi_median": 0.08142949101464893,
+          "clim_corrected": 0.14850235937557704,
+          "aoi_climatology": 0.1912964778013535
+        },
+        "general_weight": 0.2,
+        "selected_baseline": "sensor_ndvi_median",
+        "model_weight": 0.9,
+        "source_classifier_accuracy": 0.9313060599431197,
+        "source_breakdown": {
+          "s2": {
+            "rows": 1693,
+            "rmse": 0.06737198851213151
+          },
+          "landsat": {
+            "rows": 2008,
+            "rmse": 0.05723251101895425
+          },
+          "modis": {
+            "rows": 870,
+            "rmse": 0.062028164422628186
+          }
+        },
+        "protocol": "nested_calibration_v1",
+        "seed": 9901,
+        "calibration_targets": 3903
+      }
+    },
+    {
+      "seed": 10039,
+      "targets": 4571,
+      "original_reproduced_rmse": 0.06877210243024894,
+      "old_model_missing_columns_rmse": 0.06900127553094208,
+      "retrained_without_columns": {
+        "rmse": 0.06882314090982103,
+        "general_rmse": 0.07175113103506207,
+        "source_aware_rmse": 0.0693083122619206,
+        "organizer_score_estimate": 9.35,
+        "validation_targets": 4571,
+        "baselines": {
+          "primary_ndvi__interp": 0.09656966231173357,
+          "whittaker": 0.08636096339194198,
+          "sensor_ndvi_median": 0.08623549723055929,
+          "clim_corrected": 0.14834560014745599,
+          "aoi_climatology": 0.19419967859621845
+        },
+        "general_weight": 0.35000000000000003,
+        "selected_baseline": null,
+        "model_weight": 1.0,
+        "source_classifier_accuracy": 0.9442135200175017,
+        "source_breakdown": {
+          "s2": {
+            "rows": 1720,
+            "rmse": 0.062160596695199924
+          },
+          "landsat": {
+            "rows": 1940,
+            "rmse": 0.07880075812569563
+          },
+          "modis": {
+            "rows": 911,
+            "rmse": 0.056987970295361054
+          }
+        },
+        "protocol": "nested_calibration_v1",
+        "seed": 10039,
+        "calibration_targets": 3903
+      }
+    },
+    {
+      "seed": 10177,
+      "targets": 4571,
+      "original_reproduced_rmse": 0.06163713184801601,
+      "old_model_missing_columns_rmse": 0.06210637978162374,
+      "retrained_without_columns": {
+        "rmse": 0.06176680366382372,
+        "general_rmse": 0.06432270428041117,
+        "source_aware_rmse": 0.06275546652734862,
+        "organizer_score_estimate": 11.47,
+        "validation_targets": 4571,
+        "baselines": {
+          "primary_ndvi__interp": 0.0900651285447842,
+          "whittaker": 0.08060006059490156,
+          "sensor_ndvi_median": 0.08125839880933808,
+          "clim_corrected": 0.14452437042195584,
+          "aoi_climatology": 0.18778678134581284
+        },
+        "general_weight": 0.4,
+        "selected_baseline": null,
+        "model_weight": 1.0,
+        "source_classifier_accuracy": 0.9317436009625902,
+        "source_breakdown": {
+          "s2": {
+            "rows": 1643,
+            "rmse": 0.06967073461932653
+          },
+          "landsat": {
+            "rows": 2018,
+            "rmse": 0.056410367899106285
+          },
+          "modis": {
+            "rows": 910,
+            "rmse": 0.05782046775535914
+          }
+        },
+        "protocol": "nested_calibration_v1",
+        "seed": 10177,
+        "calibration_targets": 3903
+      }
+    }
+  ]
+}

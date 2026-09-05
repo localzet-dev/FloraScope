@@ -1,0 +1,105 @@
+{
+  "protocol": "unseen_aoi_diagnostic_v1",
+  "seed": 9901,
+  "fast": true,
+  "input_sha256": "a75e530d0fb51581ad6800f84b3875233778801491f02236917862faf9b424ec",
+  "training_polygons": [
+    "AOI-0003",
+    "AOI-0004",
+    "AOI-0007",
+    "AOI-0008",
+    "AOI-0011",
+    "AOI-0015",
+    "AOI-0019",
+    "AOI-0021",
+    "AOI-0022",
+    "AOI-0023",
+    "AOI-0026",
+    "AOI-0027",
+    "AOI-0030",
+    "AOI-0033",
+    "AOI-0035",
+    "AOI-0037",
+    "AOI-0040",
+    "AOI-0041",
+    "AOI-0043",
+    "AOI-0045",
+    "AOI-0048",
+    "AOI-0050",
+    "AOI-0052",
+    "AOI-0053",
+    "AOI-0060",
+    "AOI-0064",
+    "AOI-0065",
+    "AOI-0069",
+    "AOI-0070",
+    "AOI-0071",
+    "AOI-0075",
+    "AOI-0076"
+  ],
+  "held_out_polygons": [
+    "AOI-0002",
+    "AOI-0020",
+    "AOI-0038",
+    "AOI-0055",
+    "AOI-0056",
+    "AOI-0063",
+    "AOI-0077"
+  ],
+  "held_out_known": 5435,
+  "validation_targets": 813,
+  "rmse": 0.05782079928477263,
+  "gap_span_breakdown": {
+    "<=10 days": {
+      "rows": 539,
+      "rmse": 0.0540996992248256
+    },
+    "11-30 days": {
+      "rows": 230,
+      "rmse": 0.06447834064234535
+    },
+    ">30 days": {
+      "rows": 13,
+      "rmse": 0.04899442513011008
+    },
+    "one-sided": {
+      "rows": 31,
+      "rmse": 0.07027690049868193
+    }
+  },
+  "training_only_calibration": {
+    "rmse": 0.060111353312157105,
+    "general_rmse": 0.06291951545289116,
+    "source_aware_rmse": 0.06100962405566287,
+    "organizer_score_estimate": 11.97,
+    "validation_targets": 3758,
+    "baselines": {
+      "primary_ndvi__interp": 0.09013149035223636,
+      "whittaker": 0.07929781847727983,
+      "sensor_ndvi_median": 0.07981234089462846,
+      "clim_corrected": 0.15070801722761812,
+      "aoi_climatology": 0.1959594340040234
+    },
+    "general_weight": 0.35000000000000003,
+    "selected_baseline": null,
+    "model_weight": 1.0,
+    "source_classifier_accuracy": 0.9369345396487493,
+    "source_breakdown": {
+      "s2": {
+        "rows": 1382,
+        "rmse": 0.06624420593649989
+      },
+      "landsat": {
+        "rows": 1619,
+        "rmse": 0.05636699812636078
+      },
+      "modis": {
+        "rows": 757,
+        "rmse": 0.05595915133844143
+      }
+    },
+    "protocol": "nested_calibration_v1",
+    "seed": 9901,
+    "calibration_targets": 3210
+  }
+}

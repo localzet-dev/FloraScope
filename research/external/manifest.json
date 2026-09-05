@@ -1,0 +1,23 @@
+[
+  {
+    "site": "US-SDU",
+    "url": "https://modis.ornl.gov/rst/api/v1/MOD13Q1/AMERIFLUX/US-SDU/subsetStatistics?band=250m_16_days_NDVI&startDate=A2018001&endDate=A2024361",
+    "records": 161,
+    "sha256": "a06238ca588e44a565f33b0641617bb47ce36ef7057a46eadbe3f84906270367",
+    "retrieved_utc": "2026-09-05T15:35:55.716032+00:00"
+  },
+  {
+    "site": "US-Ne1",
+    "url": "https://modis.ornl.gov/rst/api/v1/MOD13Q1/AMERIFLUX/US-Ne1/subsetStatistics?band=250m_16_days_NDVI&startDate=A2018001&endDate=A2024361",
+    "records": 161,
+    "sha256": "715f5b94c61f584cfa9c7e56eb25e4fe0fe28331451978c99f6e02c836504fdf",
+    "retrieved_utc": "2026-09-05T15:35:57.917141+00:00"
+  },
+  {
+    "site": "US-GLE",
+    "url": "https://modis.ornl.gov/rst/api/v1/MOD13Q1/AMERIFLUX/US-GLE/subsetStatistics?band=250m_16_days_NDVI&startDate=A2018001&endDate=A2024361",
+    "records": 161,
+    "sha256": "1399c6c6dc1180b2d962116630ab170aeeec49b1f8647140e841b957bbd23863",
+    "retrieved_utc": "2026-09-05T15:36:00.301557+00:00"
+  }
+]

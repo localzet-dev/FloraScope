@@ -1,0 +1,92 @@
+{
+  "protocol": "external_modis_only_stress_v1",
+  "quality_min_percent": 80,
+  "summary": [
+    {
+      "site": "US-GLE",
+      "total": 161,
+      "quality_accepted": 75,
+      "pixels_per_window": 1089,
+      "events_2024": 1
+    },
+    {
+      "site": "US-Ne1",
+      "total": 161,
+      "quality_accepted": 138,
+      "pixels_per_window": 1089,
+      "events_2024": 0
+    },
+    {
+      "site": "US-SDU",
+      "total": 161,
+      "quality_accepted": 158,
+      "pixels_per_window": 1089,
+      "events_2024": 0
+    }
+  ],
+  "folds": [
+    {
+      "site": "US-GLE",
+      "seed": 9901,
+      "targets": 14,
+      "model_rmse": 0.05570417769666647,
+      "linear_rmse": 0.05995057339175332
+    },
+    {
+      "site": "US-GLE",
+      "seed": 10039,
+      "targets": 14,
+      "model_rmse": 0.07047529017743336,
+      "linear_rmse": 0.06978379749524342
+    },
+    {
+      "site": "US-GLE",
+      "seed": 10177,
+      "targets": 14,
+      "model_rmse": 0.061562071359953674,
+      "linear_rmse": 0.040377484443684684
+    },
+    {
+      "site": "US-Ne1",
+      "seed": 9901,
+      "targets": 20,
+      "model_rmse": 0.05402471186072982,
+      "linear_rmse": 0.07665150647211341
+    },
+    {
+      "site": "US-Ne1",
+      "seed": 10039,
+      "targets": 20,
+      "model_rmse": 0.05313756895434974,
+      "linear_rmse": 0.08493310243296714
+    },
+    {
+      "site": "US-Ne1",
+      "seed": 10177,
+      "targets": 20,
+      "model_rmse": 0.09376717324588936,
+      "linear_rmse": 0.09029825641235334
+    },
+    {
+      "site": "US-SDU",
+      "seed": 9901,
+      "targets": 21,
+      "model_rmse": 0.08301411234448092,
+      "linear_rmse": 0.059477990376993355
+    },
+    {
+      "site": "US-SDU",
+      "seed": 10039,
+      "targets": 21,
+      "model_rmse": 0.06409688308411786,
+      "linear_rmse": 0.023913503745282942
+    },
+    {
+      "site": "US-SDU",
+      "seed": 10177,
+      "targets": 21,
+      "model_rmse": 0.05716787354839819,
+      "linear_rmse": 0.03903017859643793
+    }
+  ]
+}

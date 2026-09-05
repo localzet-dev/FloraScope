@@ -1,0 +1,112 @@
+{
+  "folds": [
+    {
+      "rmse": 0.06217523275333839,
+      "general_rmse": 0.06472451852820371,
+      "source_aware_rmse": 0.06290834755963909,
+      "organizer_score_estimate": 11.35,
+      "validation_targets": 4571,
+      "baselines": {
+        "primary_ndvi__interp": 0.0929149487467142,
+        "whittaker": 0.08155396230194265,
+        "sensor_ndvi_median": 0.08142949101464893,
+        "clim_corrected": 0.14850235937557704,
+        "aoi_climatology": 0.1912964778013535
+      },
+      "general_weight": 0.2,
+      "selected_baseline": null,
+      "model_weight": 1.0,
+      "source_classifier_accuracy": 0.9299934368847079,
+      "source_breakdown": {
+        "s2": {
+          "rows": 1693,
+          "rmse": 0.0675431381684936
+        },
+        "landsat": {
+          "rows": 2008,
+          "rmse": 0.0574678213581736
+        },
+        "modis": {
+          "rows": 870,
+          "rmse": 0.06173052071340343
+        }
+      },
+      "protocol": "nested_calibration_v1",
+      "seed": 9901,
+      "calibration_targets": 3903
+    },
+    {
+      "rmse": 0.06877210243024894,
+      "general_rmse": 0.07161986060295204,
+      "source_aware_rmse": 0.06930997708282009,
+      "organizer_score_estimate": 9.37,
+      "validation_targets": 4571,
+      "baselines": {
+        "primary_ndvi__interp": 0.09656966231173357,
+        "whittaker": 0.08636096339194198,
+        "sensor_ndvi_median": 0.08623549723055929,
+        "clim_corrected": 0.14834560014745599,
+        "aoi_climatology": 0.19419967859621845
+      },
+      "general_weight": 0.35000000000000003,
+      "selected_baseline": null,
+      "model_weight": 1.0,
+      "source_classifier_accuracy": 0.9439947495077664,
+      "source_breakdown": {
+        "s2": {
+          "rows": 1720,
+          "rmse": 0.06203981493213304
+        },
+        "landsat": {
+          "rows": 1940,
+          "rmse": 0.07873456592808128
+        },
+        "modis": {
+          "rows": 911,
+          "rmse": 0.05712198116869728
+        }
+      },
+      "protocol": "nested_calibration_v1",
+      "seed": 10039,
+      "calibration_targets": 3903
+    },
+    {
+      "rmse": 0.06163713184801601,
+      "general_rmse": 0.06436209281894044,
+      "source_aware_rmse": 0.06252818347177769,
+      "organizer_score_estimate": 11.51,
+      "validation_targets": 4571,
+      "baselines": {
+        "primary_ndvi__interp": 0.0900651285447842,
+        "whittaker": 0.08060006059490156,
+        "sensor_ndvi_median": 0.08125839880933808,
+        "clim_corrected": 0.14452437042195584,
+        "aoi_climatology": 0.18778678134581284
+      },
+      "general_weight": 0.35000000000000003,
+      "selected_baseline": null,
+      "model_weight": 1.0,
+      "source_classifier_accuracy": 0.9328374535112667,
+      "source_breakdown": {
+        "s2": {
+          "rows": 1643,
+          "rmse": 0.06913210358331413
+        },
+        "landsat": {
+          "rows": 2018,
+          "rmse": 0.0563671332873331
+        },
+        "modis": {
+          "rows": 910,
+          "rmse": 0.05838343054161454
+        }
+      },
+      "protocol": "nested_calibration_v1",
+      "seed": 10177,
+      "calibration_targets": 3903
+    }
+  ],
+  "rmse_mean": 0.06419482234386777,
+  "rmse_std": 0.0032440723263580623,
+  "score_mean": 10.743333333333332
+}
