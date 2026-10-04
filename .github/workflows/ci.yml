@@ -20,6 +20,7 @@ jobs:
           cache-dependency-path: |
             analytics/pyproject.toml
             backend/pyproject.toml
+      - run: python -m pip install --upgrade 'pip==26.2.1'
       - run: pip install -e './analytics[dev]' -e './backend[dev]'
       - run: python -m pytest -q analytics/tests backend/tests
 

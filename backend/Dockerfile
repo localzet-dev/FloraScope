@@ -14,7 +14,8 @@ RUN apt-get update \
 
 COPY analytics ./analytics
 COPY backend ./backend
-RUN pip install --no-cache-dir "./analytics[dev]" "./backend[dev]"
+RUN python -m pip install --no-cache-dir --upgrade "pip==26.2.1" \
+    && python -m pip install --no-cache-dir "./analytics[dev]" "./backend[dev]"
 
 EXPOSE 8000
 HEALTHCHECK --interval=20s --timeout=5s --start-period=20s --retries=5 \
