@@ -5,7 +5,7 @@ services:
       dockerfile: backend/Dockerfile
     restart: unless-stopped
     ports:
-      - "${FLORASCOPE_API_PORT:-8000}:8000"
+      - "${FLORASCOPE_BIND_ADDRESS:-127.0.0.1}:${FLORASCOPE_API_PORT:-8000}:8000"
     environment:
       FLORASCOPE_DATA_DIR: /data
       FLORASCOPE_ARTIFACTS_DIR: /artifacts
@@ -40,7 +40,7 @@ services:
       dockerfile: frontend/Dockerfile
     restart: unless-stopped
     ports:
-      - "${FLORASCOPE_WEB_PORT:-8080}:80"
+      - "${FLORASCOPE_BIND_ADDRESS:-127.0.0.1}:${FLORASCOPE_WEB_PORT:-8080}:80"
     # Специально нет depends_on: web должен открыться даже во время рестарта API.
 
 volumes:

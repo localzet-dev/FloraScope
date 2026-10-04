@@ -7,6 +7,8 @@ name = "florascope-core"
 version = "3.0.1"
 description = "FloraScope analytics: gap recovery, anomaly detection and EO processing"
 requires-python = ">=3.12,<3.14"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
 dependencies = [
     "numpy==2.3.5",
     "pandas==2.2.3",
