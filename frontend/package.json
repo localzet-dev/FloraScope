@@ -25,5 +25,10 @@
     "@vitejs/plugin-react": "5.0.2",
     "typescript": "5.9.2",
     "vite": "7.3.6"
+  },
+  "author": {
+    "name": "Ivan Zorin",
+    "email": "creator@localzet.com",
+    "url": "https://www.localzet.com"
   }
 }
